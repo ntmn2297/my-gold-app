@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Mã Đơn Vị Tính</th>
+        <th scope="col">Tên Đơn Vị Tính</th>
+        <th scope="col">Chỉnh Sửa</th>
+        <th scope="col">
+            
+        </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of donvitinh; let i = index">
+        <td>{{item.MADONVITINH}}</td>
+        <td>{{item.TENDONVITINH}}</td>
+        </tr>
+    </tbody>
+</table>

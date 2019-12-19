@@ -7,10 +7,11 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { ServicePageComponent } from './service-page/service-page.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { OrderPageComponent } from './order-page/order-page.component';
+import { UnitPageComponent } from './unit-page/unit-page.component';
 
 
 @NgModule({
-  declarations: [LandingComponent, ProductPageComponent, ServicePageComponent, CategoryPageComponent, OrderPageComponent],
+  declarations: [LandingComponent, ProductPageComponent, ServicePageComponent, CategoryPageComponent, OrderPageComponent, UnitPageComponent],
   imports: [
     CommonModule,
     LandingRoutingModule
