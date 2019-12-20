@@ -8,13 +8,19 @@ import { ServicePageComponent } from './service-page/service-page.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { OrderPageComponent } from './order-page/order-page.component';
 import { UnitPageComponent } from './unit-page/unit-page.component';
+import { AddDialogComponent } from './unit-page/add-dialog/add-dialog.component';
+import {ModalModule} from "ngx-bootstrap";
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [LandingComponent, ProductPageComponent, ServicePageComponent, CategoryPageComponent, OrderPageComponent, UnitPageComponent],
+  declarations: [LandingComponent, ProductPageComponent, ServicePageComponent, CategoryPageComponent, OrderPageComponent, UnitPageComponent, AddDialogComponent],
   imports: [
+    ModalModule.forRoot(),
     CommonModule,
-    LandingRoutingModule
-  ]
+    LandingRoutingModule,
+    FormsModule
+  ],
+  entryComponents: [AddDialogComponent]
 })
 export class LandingModule { }

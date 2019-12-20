@@ -51,7 +51,7 @@ router.put('/donvitinh/:MADONVITINH', function (req, res, next) {
 router.delete('/donvitinh/:MADONVITINH', function (req, res, next) {
   db.query(
     'DELETE FROM donvitinh WHERE MADONVITINH=?',
-    [req.params.MADONVITINH, owner],
+    [req.params.MADONVITINH],
     (error) => {
       if (error) {
         res.status(500).json({status: 'error'});
