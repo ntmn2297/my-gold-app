@@ -2,7 +2,6 @@
 const express = require('express');
 function createRouter(db) {
   const router = express.Router();
-  const owner = '';
   
   router.post('/donvitinh', (req, res, next) => {
     db.query(
@@ -38,6 +37,20 @@ router.put('/donvitinh/:MADONVITINH', function (req, res, next) {
     db.query(
       'UPDATE donvitinh SET TENDONVITINH=? WHERE MADONVITINH=?',
       [req.body.TENDONVITINH, req.params.MADONVITINH],
+      (error) => {
+        if (error) {
+          res.status(500).json({status: 'error'});
+        } else {
+          res.status(200).json({status: 'ok'});
+        }
+      }
+    );
+  });
+
+  router.get('/donvitinh/:MADONVITINH', function (req, res, next) {
+    db.query(
+      'SELECT * FROM donvitinh WHERE MADONVITINH=?',
+      [req.params.MADONVITINH],
       (error) => {
         if (error) {
           res.status(500).json({status: 'error'});

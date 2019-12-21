@@ -26,6 +26,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "angular-alert-module": "^2.0.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "4.17.1",

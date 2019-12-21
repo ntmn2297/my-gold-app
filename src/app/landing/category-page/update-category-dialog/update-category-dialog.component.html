@@ -1,0 +1,35 @@
+<form>
+  <div id="contact-form" class="form-container" data-form-container>
+    <div class="row">
+      <div class="form-title">
+        <span>Thêm Sản Phẩm</span>
+      </div>
+    </div>
+    <div class="input-container">
+      <div class="row">
+                <span class="req-input" >
+                    <span class="input-status" data-toggle="tooltip" data-placement="top"> </span>
+                    <input type="text" data-min-length="8" placeholder="Tên Loại Sản Phẩm" [(ngModel)]="item.TENLOAISANPHAM" [ngModelOptions]="{standalone: true}">
+                </span>
+      </div>
+      <div class="row">
+                <span class="req-input">
+                    <span class="input-status" data-toggle="tooltip" data-placement="top"> </span>
+                    <input type="email" placeholder="Phần Trăm Lợi Nhuận" [(ngModel)]="item.PHANTRAMLOINHUAN" [ngModelOptions]="{standalone: true}">
+                </span>
+      </div>
+      <div class="row">
+                <span class="req-input">
+                    <span class="input-status" data-toggle="tooltip" data-placement="top" title="Please Input Your Phone Number."> </span>
+                    <select style="width: 88%; height: inherit; border-radius: unset;color: #999" class="form-control form-control-sm" [(ngModel)]="item.MADONVITINH" [ngModelOptions]="{standalone: true}" >
+                       <option *ngFor="let i of donvitinh" [value]="i.MADONVITINH">{{i.TENDONVITINH}}</option>
+                    </select>
+                </span>
+      </div>
+      <div class="row submit-row">
+        <button type="button" class="btn btn-block submit-form" (click)="update()" >Hoàn Tất</button>
+        <button type="button" class="btn btn-block btn-danger" (click)="bsModalRef.hide()">Hủy</button>
+      </div>
+    </div>
+  </div>
+</form>

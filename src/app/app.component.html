@@ -7,20 +7,41 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
+            <a  role="button" class="nav-link" routerLink="landing/unit-page">Đơn Vị</a>
+      </li>
+      <li class="nav-item">
         <a  role="button" class="nav-link" routerLink="landing/category-page">Loại Sản Phẩm</a>
       </li>
       <li class="nav-item">
           <a  role="button" class="nav-link" routerLink="landing/product-page">Sản Phẩm</a>
       </li>
       <li class="nav-item">
-          <a  role="button" class="nav-link" routerLink="landing/order-page">Hóa Đơn</a>
-      </li> 
-      <li class="nav-item">
         <a  role="button" class="nav-link" routerLink="landing/service-page">Dịch Vụ</a>
       </li>
       <li class="nav-item">
-        <a  role="button" class="nav-link" routerLink="landing/unit-page">Đơn Vị</a>
-      </li>
+          <a  role="button" class="nav-link" routerLink="landing/supplier-page">Nhà Cung Cấp</a>
+        </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Phiếu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="landing/sell-form">Bán Hàng</a>
+            <a class="dropdown-item" routerLink="landing/service-form">Dịch Vụ</a>
+            <a class="dropdown-item" routerLink="landing/buy-form">Mua Hàng</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Báo Cáo
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLink="landing/sell-report">Bán Hàng</a>
+              <a class="dropdown-item" routerLink="landing/service-report">Dịch Vụ</a>
+              <a class="dropdown-item" routerLink="landing/buy-report">Mua Hàng</a>
+              <a class="dropdown-item" routerLink="landing/inventory">Tồn Kho</a>
+            </div>
+          </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" style="padding-right: 10px">
       <input class="form-control mr-sm-2" type="text" placeholder="{{'HEADER.SEARCH' | translate}}" aria-label="Search">
@@ -34,5 +55,4 @@
     </select>
   </div>
 </nav>
-
 <router-outlet></router-outlet>

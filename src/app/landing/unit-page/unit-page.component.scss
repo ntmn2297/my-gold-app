@@ -1,7 +1,25 @@
-.btn{
-    margin-left: 5px
-}
-
 table {
-    text-align: center
-}
+    margin: 10px 10px 0 10px;
+    text-align: center;
+    border-collapse: collapse;
+    width: 98%;
+ 
+  }
+
+  thead {
+      background: #00cde5;
+      color: #ffffff;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #B3E5FC;
+  }
+
+  .update{
+      margin: 10px;
+  }

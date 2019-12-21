@@ -13,6 +13,7 @@ export class UnitPageComponent implements OnInit {
 
   donvitinh: donvitinh[] = [];
   dialogConfig: ModalOptions = {};
+  modal: BsModalRef;
   constructor(private http: HttpClient, private modalService: BsModalService) { }
 
   ngOnInit() {
@@ -33,6 +34,9 @@ export class UnitPageComponent implements OnInit {
 
   add(){
     this.modalService.show(AddDialogComponent);
+    this.modalService.onHidden.subscribe(rs => {
+      this.getDonvitinh();
+    })
   }
 
 }

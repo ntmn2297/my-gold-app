@@ -1,0 +1,28 @@
+<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Mã Nhà Cung Cấp</th>
+            <th scope="col">Tên Nhà Cung Cấp</th>
+            <th scope="col">Địa Chỉ</th>
+            <th scope="col">Số Điện Thoại</th>
+            <th scope="col">Chỉnh Sửa</th>
+            <th scope="col">
+                <button class="btn btn-primary update" (click)="add()">Thêm Nhà Cung Cấp</button>
+            </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of nhacungcap; let i = index">
+            <td>{{item.MANHACUNGCAP}}</td>
+            <td>{{item.TENNHACUNGCAP}}</td>
+            <td>{{item.DIACHI}}</td>
+            <td>{{item.SODIENTHOAI}}</td>
+            <td>
+                <button  class="btn btn-danger" (click)="delete(item)">Xóa</button>
+                <button  class="btn btn-info" (click)="update(item)">Chỉnh Sửa</button>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+    <app-alerts></app-alerts>
+    

@@ -1,14 +1,24 @@
 <table class="table">
     <thead>
         <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Mã Loại Sản Phẩm</th>
+        <th scope="col">Tên Loại Sản Phẩm</th>
+        <th scope="col">Phần Trăm Lợi Nhuận</th>
+        <th scope="col">Đơn Vị Tính</th>
+        <th scope="col">Chỉnh Sửa</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let item of loaisanpham">
+        <td>{{item.MALOAISANPHAM}}</td>
+        <td>{{item.TENLOAISANPHAM}}</td>
+        <td>{{item.PHANTRAMLOINHUAN * 100}}%</td>
+        <td>{{tendonvitinh(item.MADONVITINH)}}</td>
+        <td>
+            <button  class="btn btn-danger" (click)="delete(item)">Xóa</button>
+            <button style="margin-left: 5px"  class="btn btn-info" (click)="update(item)">Sửa</button>
+        </td>
         </tr>
     </tbody>
 </table>
+<button class="btn btn-warning update" (click)="add()">Thêm Loại Sản Phẩm</button>

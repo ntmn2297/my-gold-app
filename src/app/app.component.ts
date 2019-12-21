@@ -13,12 +13,13 @@ import {LoginDialogComponent} from "./login-dialog/login-dialog.component";
 export class AppComponent implements OnInit{
   title = 'temp-angular-app';
   bsModalRef: BsModalRef;
-  isShowModal: boolean = false;
+  isShowModal: boolean = false ;
   searchStr: string;
   dataService: CompleterData;
 
-  constructor(private modalService: BsModalService, private http: HttpClient, private completerService: CompleterService, private translate: TranslateService) {
-    this.dataService = this.completerService.remote('/api/product/list','name','name');
+  constructor(private modalService: BsModalService,
+     private http: HttpClient, private completerService: CompleterService, private translate: TranslateService) {
+    this.dataService = this.completerService.remote('/api/product/list', 'name', 'name');
     translate.addLangs(['en', 'vi']);
     translate.setDefaultLang('en');
     const browserLang = translate.getBrowserLang();

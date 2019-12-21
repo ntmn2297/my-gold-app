@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { donvitinh } from 'src/app/landing/model/donvitinh';
 import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
+import { AlertsService } from 'angular-alert-module';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-add-dialog',
@@ -14,8 +16,8 @@ export class AddDialogComponent implements OnInit {
     MADONVITINH: null,
     TENDONVITINH: ''
   };
-
-  constructor(private http: HttpClient) { }
+  constructor(private bsModalRef: BsModalRef,
+    private modalService: BsModalService, private http: HttpClient, private alerts: AlertsService) { }
 
   ngOnInit() {
   }
@@ -23,11 +25,9 @@ export class AddDialogComponent implements OnInit {
   add(){
     let param = {
       "TENDONVITINH": this.item.TENDONVITINH
-    }
+    };
     let header: HttpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
-    this.http.post('/donvitinh', JSON.stringify(param), {headers: header}).subscribe(rs => {
-      console.log('added');
+    this.http.post('/donvitinh', JSON.stringify(param), {headers: header}).subscribe((rs: any) => {
     })
   }
-
 }
